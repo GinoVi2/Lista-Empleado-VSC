@@ -1,0 +1,44 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model AppCrud.Models.Empleado;
+
+<div class="col-sm-8 offset-sm-2">
+
+    <h2>
+        Editar empleado
+    </h2>
+    <form asp-controller="Empleado" asp-action="Editar" method="post">
+        <input  asp-for="IdEmpleado" type ="hide">
+        <div class="mb-3">
+            <label>Nombre completo </label>
+            <input class="Form-control" asp-for="NombreCompleto" type="text" />
+        </div>
+
+        <div class="mb-3">
+            <label>Correo </label>
+            <input class="Form-control" asp-for="Correo" type="text" />
+        </div>
+        <div class="mb-3">
+            <label>Fecha de Contrato </label>
+            <input class="Form-control" asp-for="FechaContrato" type="date" />
+        </div>
+        <div class="mb-3">
+            <input class="Form-check-input" asp-for="Activo" type="checkbox" id=" chkActivo" />
+            <label class="Form-check-label" for="chkActivo ">Activo </label>
+
+        </div>
+
+        <div class=" mb-3 ">
+            <button class="btn btn-primary" type="Submit">Guardar</button>
+            <a asp-controller="Empleado" asp-action="Lista" class="btn btn-warning">Volver</a>
+        </div>
+    </form>
+
+
+
+
+
+</div>
